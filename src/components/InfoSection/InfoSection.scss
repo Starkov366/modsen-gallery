@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+.infoSection {
+  background: url('../../assets/images/Search.png') center / cover;
+  height: 421px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__title {
+    font-family: Roboto;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 96px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    width: 50vw;
+    text-shadow:
+      0 0 2px #000,
+      0 0 2px #000,
+      0 0 2px #000,
+      0 0 2px #000;
+    text-transform: capitalize;
+    color: rgba(255, 253, 250, 1);
+    &-word {
+      color: rgba(241, 121, 0, 1);
+    }
+  }
+}
