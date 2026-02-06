@@ -12,7 +12,7 @@ export function ImageCard({
 }: image & { isLike?: boolean }) {
   return (
     <div datatype-id={id} className="imageCard">
-      <img src={urls.full} className="imageCard__img"></img>
+      <img src={urls.small} className="imageCard__img"></img>
       <div className="imageCard__info">
         <p className="imageCard__name">
           {alt_description?.length > 25 ? alt_description.slice(0, 25) + '...' : alt_description}

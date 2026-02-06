@@ -34,3 +34,8 @@
     0 0 2px #000,
     0 0 2px #000;
 }
+@mixin btnSize {
+  width: 30px;
+  height: 30px;
+  border: none;
+}

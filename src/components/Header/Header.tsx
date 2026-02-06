@@ -4,6 +4,7 @@ import './Header.scss';
 import logo from '../../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 import { navItems } from '../../config/navigation';
+import { ROUTES } from '../../router/urls';
 export function Header() {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState(location.pathname);
@@ -13,7 +14,9 @@ export function Header() {
   };
   return (
     <header className="header">
-      <img className="header__logo" src={logo} alt="Логотип" />
+      <Link to={ROUTES.DEFAULT} className="header__link">
+        <img className="header__logo" src={logo} alt="Логотип" />
+      </Link>
       <nav className="header__nav">
         {navItems.map((item) => (
           <Link
