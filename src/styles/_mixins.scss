@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@mixin headerFont {
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+@mixin footerMenuItem {
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 20px;
+  leading-trim: NONE;
+  line-height: 19px;
+  letter-spacing: 0px;
+}
+
+@mixin footerHeaderMenu {
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 20px;
+  leading-trim: NONE;
+  line-height: 18px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+@mixin textBorder {
+  text-shadow:
+    0 0 2px #000,
+    0 0 2px #000,
+    0 0 2px #000,
+    0 0 2px #000;
+}
+@mixin btnSize {
+  width: 30px;
+  height: 30px;
+  border: none;
+}
