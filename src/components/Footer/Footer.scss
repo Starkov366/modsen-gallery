@@ -59,6 +59,10 @@
       @include footerMenuItem;
       color: rgba(202, 201, 201, 0.753);
       margin-top: 12px;
+      &Text {
+        color: rgba(202, 201, 201, 0.753);
+        text-decoration: none;
+      }
     }
   }
 

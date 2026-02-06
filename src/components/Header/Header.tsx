@@ -1,31 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import './Header.scss';
 import logo from '../../assets/images/logo.png';
-import category from '../../assets/images/category.png';
-import images from '../../assets/images/image.png';
-import favorites from '../../assets/images/favorites.png';
 import { Link } from 'react-router-dom';
-import { ROUTES } from '../../router/urls';
-
+import { navItems } from '../../config/navigation';
 export function Header() {
+  const location = useLocation();
+  const [activeLink, setActiveLink] = useState(location.pathname);
+
+  const handleLinkClick = (path: string) => {
+    setActiveLink(path);
+  };
   return (
     <header className="header">
       <img className="header__logo" src={logo} alt="Логотип" />
       <nav className="header__nav">
-        <Link to={ROUTES.CATEGORY} className="header__link">
-          <img className="header__icon" src={category} alt="Категории" />
-          <span className="header__text">Category</span>
-        </Link>
-
-        <Link to={ROUTES.IMAGES} className="header__link">
-          <img className="header__icon" src={images} alt="Изображения" />
-          <span className="header__text">Images</span>
-        </Link>
-
-        <Link to={ROUTES.FAVOURITES} className="header__link">
-          <img className="header__icon" src={favorites} alt="Избранное" />
-          <span className="header__text">Favourites</span>
-        </Link>
+        {navItems.map((item) => (
+          <Link
+            key={item.id}
+            to={item.to}
+            className="header__link"
+            onClick={() => handleLinkClick(item.id)}
+          >
+            <img
+              className="header__icon"
+              src={item.id === activeLink ? item.activeIcon : item.icon}
+            />
+            <span
+              style={{ color: item.id === activeLink ? 'rgba(224, 164, 73, 1)' : 'white' }}
+              className="header__text"
+            >
+              {item.label}
+            </span>
+          </Link>
+        ))}
       </nav>
     </header>
   );
