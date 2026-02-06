@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Gravitas+One&family=Lexend+Deca:wght@100..900&family=Pacifico&family=Pixelify+Sans:wght@400..700&family=Russo+One&family=Tektur:wght@400..900&display=swap');
+.imageCard {
+  width: 286px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(240, 241, 241, 1);
+  overflow: hidden;
+
+  &__img {
+    align-self: flex-start;
+    width: 286px;
+    height: 175px;
+    object-position: center;
+    object-fit: cover;
+  }
+  &__icon {
+  }
+  &__info {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  &__name {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16.54px;
+    leading-trim: NONE;
+    line-height: 26.32px;
+    letter-spacing: -3%;
+  }
+}
+.imageCard:hover {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: 0.3s ease;
+}
