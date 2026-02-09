@@ -1,30 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import 'styles/mixins.scss';
+
 .favourites {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 80px;
-  &__title {
-    color: rgba(224, 164, 73, 1);
-    font-family: Roboto;
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 32px;
-    leading-trim: NONE;
-    line-height: 100%;
-    letter-spacing: 0%;
-    vertical-align: middle;
-  }
-  &__info {
-    font-family: Roboto;
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 40px;
-    leading-trim: NONE;
-    line-height: 100%;
-    letter-spacing: 0%;
-    vertical-align: middle;
-    margin-top: 5px;
-  }
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   margin-bottom: 700px;
+
+   &__title {
+      color: rgba(224, 164, 73, 1);
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 100%;
+      margin-top: 80px;
+      text-align: center;
+   }
+
+   &__info {
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 100%;
+      margin-top: 5px;
+      margin-bottom: 80px;
+      text-align: center;
+   }
+
+   &__empty {
+      width: 37vw;
+      max-width: 600px;
+      min-width: 250px;
+      text-align: center;
+      @include notFoundParagraph;
+
+      &-word {
+         @include notFoundWord;
+      }
+   }
+}
+
+@media (max-width: 1024px) {
+   .favourites {
+      &__title {
+         font-size: 6vw;
+      }
+      &__info {
+         font-size: 7vw;
+      }
+      &__empty {
+         width: 50vw;
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .favourites {
+      &__title {
+         font-size: 8vw;
+         margin-top: 40px;
+      }
+      &__info {
+         font-size: 9vw;
+         margin-bottom: 40px;
+      }
+      &__empty {
+         width: 70vw;
+
+         &-word {
+            font-size: 10vw;
+         }
+      }
+   }
+}
+
+@media (max-width: 480px) {
+   .favourites {
+      &__title {
+         font-size: 8vw;
+      }
+      &__info {
+         font-size: 5vw;
+      }
+      &__empty {
+         width: 2vw;
+         font-size: 10vw;
+         &-word {
+            font-size: 10vw;
+         }
+      }
+   }
 }
