@@ -1,0 +1,29 @@
+@import 'styles/mixins.scss';
+.pagination {
+   font-family: Lexend Deca;
+   font-weight: 300;
+   font-style: Light;
+   font-size: 18px;
+   line-height: 24px;
+   letter-spacing: 0%;
+   align-self: flex-end;
+   margin-right: 18vw;
+   margin-bottom: 30px;
+   &__back {
+      @include btnSize;
+   }
+   &__next {
+      @include btnSize;
+      background: url('../../assets/images/next.png') bottom no-repeat;
+   }
+   &__btn {
+      background: transparent;
+      @include btnSize;
+   }
+   &__btnActive {
+      background: rgb(241, 121, 0, 1);
+      @include btnSize;
+      color: white;
+      border-radius: 4px;
+   }
+}

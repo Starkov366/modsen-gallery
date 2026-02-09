@@ -1,0 +1,47 @@
+@import 'styles/mixins.scss';
+.NotFound {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-top: 55px;
+
+   &__httpCode {
+      font-size: 128px;
+      @include notFoundCodes;
+   }
+
+   &__label {
+      @include notFoundCodes;
+      font-size: 48px;
+      line-height: 100%;
+   }
+
+   &__info {
+      width: 685px;
+      margin-top: 55px;
+      margin-bottom: 550px;
+   }
+
+   &__infoTitle {
+      @include notFoundWord;
+      color: black;
+   }
+
+   &__infoWord {
+      @include notFoundWord;
+   }
+}
+@media (max-width: 750px) {
+   .NotFound {
+      &__info {
+         width: 70vw;
+      }
+      &__infoTitle {
+         font-size: 7vw;
+      }
+      &__infoWord {
+         font-size: 7vw;
+      }
+   }
+}

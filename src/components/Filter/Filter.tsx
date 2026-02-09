@@ -1,15 +1,26 @@
-import React from 'react';
-import './Filter.scss';
-export function Filter() {
-  return (
-    <div className="filter">
-      <p className="filter__info">Sort by</p>
-      <select className="filter__select">
-        <option defaultValue="Relevant" className="filter__option">
-          Relevant
-        </option>
-        <option className="filter__option">Latest</option>
-      </select>
-    </div>
-  );
+import React, { memo } from 'react';
+import 'components/Filter/Filter.scss';
+import { filterConfig } from 'config/filterOptions';
+type FilterProps = {
+   handleFilter: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+   isTargetImage: boolean;
+};
+function Filter({ handleFilter, isTargetImage }: FilterProps) {
+   return (
+      !isTargetImage && (
+         <div style={{ filter: isTargetImage ? 'blur(5px)' : 'inherit' }} className="filter">
+            <p className="filter__info">Sort by</p>
+            <select onChange={handleFilter} className="filter__select" defaultValue="Relevant">
+               {filterConfig.map((option) => {
+                  return (
+                     <option key={option.value} className="filter__option" value={option.value}>
+                        {option.textContent}
+                     </option>
+                  );
+               })}
+            </select>
+         </div>
+      )
+   );
 }
+export const FilterComponent = memo(Filter);

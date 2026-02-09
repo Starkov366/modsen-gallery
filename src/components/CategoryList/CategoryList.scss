@@ -1,0 +1,10 @@
+.category__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  gap: 20px;
+  margin-top: 40px;
+}
