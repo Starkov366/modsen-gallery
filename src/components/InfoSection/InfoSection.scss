@@ -1,27 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
-@import '../../styles/mixins.scss';
+@import 'styles/mixins.scss';
 .infoSection {
-  background: url('../../assets/images/Search.png') center / cover;
-  height: 421px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  &__title {
-    font-family: Roboto;
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 96px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: center;
-    width: 50vw;
-    @include textBorder;
-    text-transform: capitalize;
-    color: rgba(255, 253, 250, 1);
-    &-word {
-      color: rgba(241, 121, 0, 1);
-    }
-  }
+   background: url('../../assets/images/Search.png') center / cover;
+   height: 421px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   &__title {
+      font-family: Roboto;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 96px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+      width: 50vw;
+      @include textBorder;
+      text-transform: capitalize;
+      color: rgba(255, 253, 250, 1);
+      &-word {
+         color: rgba(241, 121, 0, 1);
+      }
+   }
+}
+
+@media (max-width: 1220px) {
+   .infoSection {
+      &__title {
+         font-size: 7vw;
+         width: 100%;
+      }
+   }
+}
+@media (max-width: 820px) {
+   .infoSection {
+      &__title {
+         font-size: 11vw;
+         width: 100%;
+      }
+   }
+}
+@media (max-width: 400px) {
+   .infoSection {
+      &__title {
+         font-size: 10vw;
+         width: 110%;
+      }
+   }
 }

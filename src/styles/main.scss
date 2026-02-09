@@ -1,3 +1,10 @@
-@import './mixins.scss';
-@import './variables.scss';
-@import './reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Gravitas+One&family=Lexend+Deca:wght@100..900&family=Pacifico&family=Pixelify+Sans:wght@400..700&family=Russo+One&family=Signika:wght@300..700&family=Tektur:wght@400..900&display=swap');
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+@import 'styles/reset.scss';
+.error {
+   @include notFoundParagraph;
+   &__word {
+      @include notFoundWord;
+   }
+}

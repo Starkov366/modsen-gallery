@@ -1,16 +1,24 @@
+@import 'styles/mixins.scss';
 .images {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  &__list {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 60vw;
-    gap: 15px;
-    margin-bottom: 50px;
-  }
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   &__list {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 60vw;
+      gap: 15px;
+      margin-bottom: 50px;
+   }
+   &__notFound {
+      @include notFoundParagraph;
+      width: 40vw;
+      &-word {
+         @include notFoundWord;
+      }
+   }
 }

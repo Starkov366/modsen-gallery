@@ -1,27 +1,25 @@
 .filter {
-  display: flex;
-  align-items: center;
-  align-self: flex-end;
-  justify-content: center;
-  gap: 10px;
-  margin-right: 17.5%;
-  &__info {
-    font-family: Lexend Deca;
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 17.54px;
-    line-height: 26.32px;
-    letter-spacing: -3%;
-    margin-top: 15px;
-  }
-  &__select {
-    margin-top: 20px;
-    width: 146px;
-    height: 41px;
-    border-radius: 16px;
-    color: rgba(196, 196, 196, 1);
-    border: 1px solid rgba(196, 196, 196, 1);
-  }
-  &__option {
-  }
+   display: flex;
+   align-items: center;
+   align-self: flex-end;
+   justify-content: center;
+   gap: 10px;
+   margin-right: 17.5%;
+   &__info {
+      font-family: Lexend Deca;
+      font-weight: 500;
+      font-style: Medium;
+      font-size: 17.54px;
+      line-height: 26.32px;
+      letter-spacing: -3%;
+      margin-top: 15px;
+   }
+   &__select {
+      margin-top: 20px;
+      width: 146px;
+      height: 41px;
+      border-radius: 16px;
+      color: rgba(196, 196, 196, 1);
+      border: 1px solid rgba(196, 196, 196, 1);
+   }
 }

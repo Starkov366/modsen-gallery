@@ -1,41 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 @mixin headerFont {
-  font-family: Roboto;
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 24px;
-  line-height: 100%;
-  letter-spacing: 0;
+   font-family: Roboto;
+   font-weight: 400;
+   font-style: Regular;
+   font-size: 24px;
+   line-height: 100%;
+   letter-spacing: 0;
 }
 @mixin footerMenuItem {
-  font-family: Roboto;
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 20px;
-  leading-trim: NONE;
-  line-height: 19px;
-  letter-spacing: 0px;
+   font-family: Roboto;
+   font-weight: 400;
+   font-style: Regular;
+   font-size: 20px;
+   line-height: 19px;
+   letter-spacing: 0px;
 }
 
 @mixin footerHeaderMenu {
-  font-family: Roboto;
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 20px;
-  leading-trim: NONE;
-  line-height: 18px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+   font-family: Roboto;
+   font-weight: 400;
+   font-style: Regular;
+   font-size: 20px;
+   line-height: 18px;
+   letter-spacing: 3px;
+   text-transform: uppercase;
 }
 @mixin textBorder {
-  text-shadow:
-    0 0 2px #000,
-    0 0 2px #000,
-    0 0 2px #000,
-    0 0 2px #000;
+   text-shadow:
+      0 0 2px #000,
+      0 0 2px #000,
+      0 0 2px #000,
+      0 0 2px #000;
 }
 @mixin btnSize {
-  width: 30px;
-  height: 30px;
-  border: none;
+   width: 30px;
+   height: 30px;
+   border: none;
+}
+@mixin galleryBtns {
+   width: 57px;
+   height: 57px;
+   border-radius: 50%;
+   background-color: rgba(241, 121, 0, 1);
+   border: none;
+}
+@mixin notFoundParagraph {
+   font-family: Lexend Deca;
+   font-weight: 700;
+   font-size: 64px;
+   line-height: 100%;
+   letter-spacing: 0%;
+   text-align: center;
+   text-transform: capitalize;
+   padding-top: 100px;
+   padding-bottom: 800px;
+}
+@mixin notFoundWord {
+   font-family: Lexend Deca;
+   font-weight: 700;
+   font-size: 64px;
+   line-height: 100%;
+   letter-spacing: 0%;
+   text-align: center;
+   margin-right: 20px;
+   text-transform: capitalize;
+   color: rgba(241, 121, 0, 1);
+}
+@mixin notFoundCodes {
+   font-family: Signika;
+   font-weight: 400;
+   font-style: Regular;
+   line-height: 100%;
+   letter-spacing: 0%;
+   color: rgba(241, 121, 0, 1);
 }
